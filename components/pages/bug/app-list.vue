@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list-item three-line>
+    <v-list-item dense>
       <v-list-item-icon>
         <edit-button collection="bugs" :id="bug.id"></edit-button>
       </v-list-item-icon>

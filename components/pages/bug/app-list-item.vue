@@ -9,19 +9,11 @@
     </v-list-item-title>
     <v-list-item-subtitle>
       <v-row>
-        <v-col>報告</v-col>
-        <v-col>設計</v-col>
-        <v-col>開発</v-col>
-        <v-col>検証</v-col>
+        <v-col>{{ account(bug.reportUser) | name }} / {{ bug.reportDate || "----" }}</v-col>
+        <v-col>{{ account(bug.designUser) | name }} / {{ bug.designDate || "----" }}</v-col>
+        <v-col>{{ account(bug.developUser) | name }} / {{ bug.developDate || "----" }}</v-col>
+        <v-col>{{ account(bug.testUser) | name }} / {{ bug.testDate || "----" }}</v-col>
       </v-row>
-      <v-list-item-title>
-        <v-row>
-          <v-col>{{ account(bug.reportUser) | name }} / {{ bug.reportDate || "----" }}</v-col>
-          <v-col>{{ account(bug.designUser) | name }} / {{ bug.designDate || "----" }}</v-col>
-          <v-col>{{ account(bug.developUser) | name }} / {{ bug.developDate || "----" }}</v-col>
-          <v-col>{{ account(bug.testUser) | name }} / {{ bug.testDate || "----" }}</v-col>
-        </v-row>
-      </v-list-item-title>
     </v-list-item-subtitle>
   </v-list-item-content>
 </template>
@@ -45,3 +37,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.col {
+  padding: 2px 18px;
+}
+</style>

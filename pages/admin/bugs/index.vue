@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card>
-      <list-toolbar title="不備・障害一覧"></list-toolbar>
+      <list-toolbar title="不備・障害一覧" :search="true"></list-toolbar>
       <v-divider></v-divider>
       <v-tabs>
         <v-tab @click="progress=null">すべて</v-tab>

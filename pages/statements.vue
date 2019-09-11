@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card height="380px">
+    <v-card height="370px">
       <v-toolbar color="primary" dark dense>
         <v-toolbar-title>入出金明細</v-toolbar-title>
       </v-toolbar>

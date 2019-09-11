@@ -10,12 +10,12 @@
           label="金額"
           type="number"
           :value="amount"
-          :rules="[v => v < account.total - fee || '残高が不足しています']"
+          :rules="[v => v < account.total - fee || '残高が不足しています', 
+                    v => v > 0 ||'数字を入力してください',
+                      v => Number.isInteger(v) ||'整数で入力してください']"
           @input="$store.commit('transfer/amount', $event)"
         />
-        <v-btn nuxt dark color="primary" :disabled="!valid" @click="transfer">
-          振込実行
-        </v-btn>
+        <v-btn nuxt dark color="primary" :disabled="!valid" @click="transfer">振込実行</v-btn>
       </v-form>
     </v-card-text>
   </v-card>

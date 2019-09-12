@@ -15,6 +15,8 @@
                       v => Number.isInteger(v) ||'整数で入力してください']"
           @input="$store.commit('transfer/amount', $event)"
         />
+
+        <v-btn nuxt dark to="account" color="success">戻る</v-btn>
         <v-btn nuxt dark color="primary" :disabled="!valid" @click="transfer">振込実行</v-btn>
       </v-form>
     </v-card-text>

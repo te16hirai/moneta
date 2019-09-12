@@ -43,6 +43,7 @@
     </v-card-text>
     <v-card-actions>
       <v-spacer />
+      <v-btn nuxt to="login" color="success">戻る</v-btn>
       <v-btn color="primary" @click="signin">口座開設</v-btn>
     </v-card-actions>
   </v-card>
@@ -55,7 +56,7 @@ export default {
   layout: "login",
   data: () => ({
     passwordRules: [
-      v => v && v.length > 4 || "パスワードは4文字以上です",
+      v => v && v.length >= 4 || "パスワードは4文字以上です",
       v => /[0-9]/.test(v) || "パスワードは1文字以上数字を含みます",
     ],
   }),

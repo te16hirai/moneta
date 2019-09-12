@@ -9,10 +9,13 @@
       <v-toolbar-title>
         <p class="body-1 my-0">{{ bank | name }}</p>
         <p class="body-1 my-0">{{ branch | name }}</p>
+
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn class="title" nuxt to="login" text>{{ account | name }}様</v-btn>
+        <p  class="title my-4 mx-8">{{ account | name }}様 </p>
+        <v-btn width="170" class="title"  nuxt to="login" color="#FFABCE" >ログアウト</v-btn>
+
       </v-toolbar-items>
     </v-app-bar>
     <v-content>
